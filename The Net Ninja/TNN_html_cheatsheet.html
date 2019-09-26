@@ -17,30 +17,108 @@ Ans - Cascading Style Sheet
 > it is used to change the color, position, font, font-size of the content on the web page 
 -->
 <!DOCTYPE html>
-<!-- !DOCTYPE html tells the browser that lookthe following document is gonna be a html -->
+<!-- !DOCTYPE html tells the browser that look the following document is gonna be a html -->
 <!-- !DOCTYPE html is a html5 semantics -->
 <html lang="en">
 <!-- Root tag of every html page -->
 
 <head>
-    <!--the content which is put inside the head tag does not render on the web page it act as the extra data or meta data -->
-    <meta charset="UTF-8">
-    <!-- The charset attribute specifies the character encoding for the HTML document   
+  <!--the content which is put inside the head tag does not render on the web page it act as the extra data or meta data -->
+  <meta charset="UTF-8" />
+  <!-- The charset attribute specifies the character encoding for the HTML document   
     utf-8 character encoding is used by most of the web browser another type of encoding is the ascii -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.
     The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
     The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- The X-UA-Compatible meta tag allows web authors to choose what version of Internet Explorer the page should be rendered as.here wehave declared the microdoft edge -->
-    <title>Document</title>
-    <!--gives the title of the web page shown in the tab space-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- The X-UA-Compatible meta tag allows web authors to choose what version of Internet Explorer the page should be rendered as.here we have declared the microsoft edge -->
+  <title>Document</title>
+  <!--gives the title of the web page shown in the tab space-->
 </head>
 
 <body>
-    <!--the content we declare inside the body -->
-    <p>Hello Ninjas</p>
-    <p>My first paragraph</p>
+  <!--the content we declare inside the body -->
+  <p>
+    Hello Ninjas My first paragraph it is represented by p tag represent
+    paragraph tags and used to display paragraph on web pages
+  </p>
+  <br />
+  <hr />
+  <strong>Web Ninja inside strong tag</strong>
+  <p>
+    strong tags makes something bold, makes something important in the eyes of
+    the browser
+  </p>
+  <br />
+  <hr />
+  <em> em tag makes text italic</em>
+  <br />
+
+  <div class="heading-tag">
+    <hr />
+    <p>next we will see heading tags</p>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <p>
+      heading tags start from h1 and goes till h6 while h1 being the biggest
+      heading and h6 being the smallest either h1>h2>h3>h4>h5>h6
+    </p>
+    <hr />
+  </div>
+
+  <div class="list-tag">
+    <p>now we will show you ul/ol/li tags</p>
+    <p>these tags are used to create list</p>
+    <p>ul: stands for unordered list</p>
+    <p>ol: stands for ordered list</p>
+    <p>li: stand for list items we declare inside ul/ol tags</p>
+    <em>ul:unordered list</em>
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+    </ul>
+    <p>
+      different between ordered and unordered list is that ordered list use
+      1,2,3,4 to represent list item and unordered list use bullet points to
+      represent the list item
+    </p>
+    <em>ol:ordered list</em>
+    <ol>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+    </ol>
+  </div>
+
+  <hr />
+  <br />
+  <p>
+    <em>div tags</em> they are used to divide the webpages into different
+    sections.its a block type element i have putted list part and heading part
+    in different div tag. div tags stands for division
+  </p>
+
+  <hr />
+  <br />
+  <em><span style="color: brown; font-size: 18px">text inside span tag</span></em>
+  <p>
+    span tag is an inline tag they are used when you want to hook certain css
+    style or javascript function to a text inside another tag
+  </p>
+
+  <em>the single tags br hr img</em>
+  <p>these tags are defined using single tags</p>
+  <p>br tag stands for break tag use to give space between two elements</p>
+  <hr>
+  <p>hr tag is use to give horizontal line between two elements</p>
 </body>
 
 </html>
