@@ -1,0 +1,47 @@
+/* HTML & CSS crash course by the NET NINJA
+DOCUMENTATION
+CSS CHEAT SHEET DOCUMENTATION
+REFERENCE- THE NET NINJA */
+
+/*
+css stands for cascading style sheet. It is the list of rule set use to decorate the html web page.
+A rule set is made up of- 
+
+1-Selectors---a selectors are just tag names,id names,class name use to hook css rule to a perticular tag or element. for ex- h1,p,li,div(tag name) #username #header(id name) .nav-header .btn-danger(class name)
+
+2-curly braces--- curly braces defines the starting an ending of a single rule.
+
+3-declaration/property---these are the key value pair applied to the html tag or element
+
+example of css rule set
+
+1.--div {
+  color: red;
+  margin: 20px;
+}
+
+
+div is a selector
+{} defines starting and ending
+color:red;
+margin:20px-are properties
+
+2.---li {
+  font-weight: bold;
+} 
+*/
+/* three ways to declare css 
+
+1. inline
+    by using a style attribute inside a tag element
+    an inline css is used to apply unique style to a single html element
+
+2. internal
+    by using a <style> tag inside <head></head> section of the html page
+    an internal css is used to define css of a single web page
+
+3. external
+    by using external css file.
+    an external css file is used to style multiple html pages simultaneously
+    an external css is added by adding <link> tag inside the <head></head> section of the html pages   
+*/
