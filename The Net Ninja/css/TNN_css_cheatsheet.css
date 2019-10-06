@@ -45,3 +45,188 @@ margin:20px-are properties
     an external css file is used to style multiple html pages simultaneously
     an external css is added by adding <link> tag inside the <head></head> section of the html pages   
 */
+
+/* the different type of selectors and there combination
+1) #id <--- id selector to hook tag with the defined id to the css.
+id are mostly unique and mostly applied to a single/parent tags.
+
+2) .class-name <--- class selector to hook tags define with declared class-name to css. class are mostly use to hook multiple tags to css  
+
+3) h1,h2,div,p <-- we can directly can use tags to hook them to css
+
+we can use combination of the above selectors to define net selectors that tag perticular tags */
+
+/* the below selector contains id = introduction and h2 tag.
+the below selector target all those h2 tags whose parent is a tag with id introduction*/
+
+#introduction > h2 {
+  color: orange;
+  background-color: slategrey;
+  font-size: 20px;
+  text-decoration: bold;
+  /* line-through property puts a strike line trough text */
+}
+
+/* the below selector target all those p tags whose parent is div tag with id introduction
+">" is use to target the immediate children of defined selector */
+div#introduction > p {
+  color: blue;
+}
+
+/* the below selector target all those a tags whose parent is div tag with id introduction*/
+div#introduction > a {
+  text-decoration: none;
+  /* text-decoration: none; removes the default underline beneath the anchor tag text */
+  font-size: 20px; /* increase font size to 20 */
+  font-weight: bolder; /*USE TO INSERT BOLD weight TO TEXT*/
+  color: goldenrod; /*changes color of the text*/
+}
+
+div#introduction > ul {
+  list-style-type: none;
+  /*removes the bullets from the list item by default its discs*/
+  /* border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  instead of defining border like this we use shorthand */
+  border: 2px solid rebeccapurple; /*will be applied to all 4 sides*/
+  border-bottom: 3px dotted rebeccapurple; /*will applied to bottom only*/
+  border-top: 3px dashed rebeccapurple; /*will applied to top only*/
+  /* /like this we can apply border to all 4 sides separately also/ */
+
+  /* padding/margin: 20px; padding/margin of 20px applied to all 4 sides
+  padding-top/margin-top: 10px; padding/margin only to top
+  padding-left/margin-left: 10px; padding/margin only to left
+  or we can use shorthand */
+  /* padding/margin: top right bottom left; 
+  padding/margin: top&bottom left&right*/
+  padding: 10px 20px 10px 20px;
+  margin: 5px 10px 5px 10px;
+}
+
+/* the below selector target all those p tags with class .news-article*/
+p.news-article {
+  color: dimgrey; /*changes text color */
+  word-spacing: 5px; /*gives spaces of 5px between words*/
+  letter-spacing: 2px; /*gives spaces of 2px between each alphabet of word*/
+  line-height: 20px; /*gives distance of 50 pixels between each line*/
+  font-family: helvetica; /*changes the fault family of the text to helvetica*/
+  /*by default its times new roman. the above fonts are called web safe fonts as they are supported by most of the browser/ browser are preloaded with these fonts*/
+  column-count: 2;
+  /*divides the paragraph into columns.The no. of columns depend on the no. specified. Gives it a news newspaper vies */
+  column-gap: 20px; /*increase distance between columns*/
+  margin: 10px 10px;
+}
+
+/* box-model-every element in the html is made of box 
+each box contains contains 4 parts
+1. content:the area occupied by content in the tags
+2. padding-space between content and the border.
+3. border-border usually contains content and padding. use to separate two different boxes.
+4. margin-space between margin of two boxes. 
+*/
+
+/*RGB color and hexacode color are ways to assign color to tags/content
+RGB channel contains three channel
+1.red channel
+2.green color
+3.blue color 
+
+hexacode contains 6digit code followed by # for ex #ebebeb
+the first two digit depicts red channel
+the middle two digits depicts green channel
+the last two digit depicts blue channel*/
+
+/*3 types of elements in box model
+1.inline elements--elements lie next to each other and take only the space of the content
+tags include span,a,strong,em,img and more.
+we can apply margin to only left and right of the elements and border/padding to all 4 sides.
+
+2.block elements-takes full length width of the page
+tags include p,div,h1,h2,h3 and more.
+we can apply margin and padding to all 4 sides of the elements and border to all 4 sides.
+
+3.inline-block elements--elements lie next to each other and take only the space of the content.
+but its the best of both worlds it has advantages of both block level elements as well as inline level elements
+tags can be converted to inline block using display: property which has the 
+value of block inline-block and block value 
+we can apply margin and padding to 4 sides of the elements and border to all 4 sides.*/
+
+#inline-element {
+  box-sizing: border-box;
+  display: block;
+  padding: 10px;
+  background-color: #777474;
+  color: rgb(255, 255, 255);
+}
+#inline-element > strong,
+#inline-element > em,
+#inline-element > a {
+  font-size: 22px;
+  border: 2px dotted white;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+}
+/*converting inline to block*/
+#inline-element > span {
+  box-sizing: border-box;
+  display: block;
+  margin: 20px 10px;
+  padding: 5px;
+  border: 2px solid white;
+}
+
+#block-element {
+  box-sizing: border-box;
+  display: block;
+  margin: 10px 0px;
+  padding: 10px;
+  background-color: rgb(134, 245, 245);
+  color: #000000;
+}
+#block-element > div,
+#block-element > p {
+  font-size: 22px;
+  border: 2px dotted black;
+  padding: 10px;
+  margin: 10px;
+}
+/*converting block to inline*/
+#block-element > h3 {
+  box-sizing: border-box;
+  display: inline;
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid black;
+}
+
+#inline-block-element {
+  font-family: monospace;
+  font-size: 24px;
+  background: black;
+  color: white;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+#inline-block-element > ul {
+  list-style-type: none;
+  display: block;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  margin: 0px 10px;
+}
+
+#inline-block-element > ul li {
+  box-sizing: border-box;
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px 0px 10px 15%;
+  padding: 10px;
+}
+#inline-block-element > ul li:hover {
+  box-sizing: border-box;
+  border: 2px solid white;
+}
