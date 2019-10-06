@@ -230,3 +230,80 @@ we can apply margin and padding to 4 sides of the elements and border to all 4 s
   box-sizing: border-box;
   border: 2px solid white;
 }
+
+#selectors {
+  background-color: rgb(248, 196, 127);
+  color: black;
+  padding: 10px;
+}
+
+/* the below selector targets p tag having multiple classes whose parent is a div with id "selectors" */
+
+div#selectors > p.success.feedback {
+  background-color: goldenrod;
+  color: black;
+  padding: 10px;
+}
+
+/* the below selector targets p tag having  class success*/
+p.success {
+  color: green;
+  font-weight: 800;
+}
+
+/* the below selector targets p tag having  class error*/
+p.error {
+  font-weight: 800;
+  color: red;
+}
+
+/*defining a selector who targets anchor tag with class question whose parent is a div with id selector*/
+/*A*/
+div#selectors > a.question {
+  text-decoration: none;
+  color: blue;
+  background-color: darksalmon;
+}
+
+/*a selector who targets a tag based on its attributes*/
+/*B*/
+a[href="https://www.yahoo.com"] {
+  text-decoration: none;
+  color: white;
+  background-color: darkred;
+}
+/*the above selector targets all the anchor tag with href attribute having value set to href="https://www.yahoo.com"*/
+/*A and B both target to the same element in html file but since "div#selectors > a.question"  has more precidence, so it work on html*/
+
+/*cascade means flowing down of property from top to bottom*/
+#inheritance {
+  color: coral;
+  background-color: black;
+  font-family: monospace;
+  font-size: 24px;
+  margin: 10px;
+  padding: 10px;
+}
+/*yo will see the property of parent div tag is applied to all its children i.e both the p tags. this is know as inheritance.
+most of the color and text related properties are inherited*/
+
+/*but some properties are not inherited for example margin padding
+we can also perform explicit inheritance*/
+/*A*/
+#inheritance > p {
+  font-family: inherit;
+  margin: inherit; /*calling explicit inheritance*/
+  border: 1px solid white;
+  padding: 10px;
+}
+/*B*/
+#inheritance > p {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5px; /*calling explicit inheritance*/
+  border: 4px solid skyblue;
+  padding: 5px;
+  color: white;
+}
+/* both a and b selector targets same element in html.
+but css works down from top to bottom so the selector at the bottom of the css has more weight */
+
