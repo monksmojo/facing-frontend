@@ -7,7 +7,7 @@ REFERENCE- THE NET NINJA */
 css stands for cascading style sheet. It is the list of rule set use to decorate the html web page.
 A rule set is made up of- 
 
-1-Selectors---a selectors are just tag names,id names,class name use to hook css rule to a perticular tag or element. for ex- h1,p,li,div(tag name) #username #header(id name) .nav-header .btn-danger(class name)
+1-Selectors---a selectors are just tag names,id names,class name use to hook css rule to a particular tag or element. for ex- h1,p,li,div(tag name) #username #header(id name) .nav-header .btn-danger(class name)
 
 2-curly braces--- curly braces defines the starting an ending of a single rule.
 
@@ -54,7 +54,7 @@ id are mostly unique and mostly applied to a single/parent tags.
 
 3) h1,h2,div,p <-- we can directly can use tags to hook them to css
 
-we can use combination of the above selectors to define net selectors that tag perticular tags */
+we can use combination of the above selectors to define net selectors that tag particular tags */
 
 /* the below selector contains id = introduction and h2 tag.
 the below selector target all those h2 tags whose parent is a tag with id introduction*/
@@ -126,13 +126,13 @@ each box contains contains 4 parts
 4. margin-space between margin of two boxes. 
 */
 
-/*RGB color and hexacode color are ways to assign color to tags/content
+/*RGB color and hex-code color are ways to assign color to tags/content
 RGB channel contains three channel
 1.red channel
 2.green color
 3.blue color 
 
-hexacode contains 6digit code followed by # for ex #ebebeb
+hex-code contains 6digit code followed by # for ex #ebebeb
 the first two digit depicts red channel
 the middle two digits depicts green channel
 the last two digit depicts blue channel*/
@@ -307,3 +307,97 @@ we can also perform explicit inheritance*/
 /* both a and b selector targets same element in html.
 but css works down from top to bottom so the selector at the bottom of the css has more weight */
 
+/*
+now we will learn about how to position elements in the html file using the position properties we have in css3
+types of position properties
+1. Static- by default ech element in the html web page is in static position it defines the normal flow of the webpage.
+
+2. relative-relative change the position of the element relative to its original position.
+when element is moved around its original position its space is still left on the web page.
+we mostly apply relative position to a parent element so that we can give absolute position to its child.
+
+.parent{
+  position:relative;
+  left:20px;
+  bottom:20px;
+}
+
+left:20px means 20px from left of its original position
+bottom:20px; means 20px above from the bottom of its original position
+
+3. fixed- makes element fixed to the viewport of the webpage.
+viewport-is the area in which we see the web-page.
+.nav{
+  position:fixed;
+  left:0px;
+  top:0px;
+}
+so the nav element is sticked to its top position of the viewport
+
+4. absolute- absolute position allow us to position the element absolutely to its closet parent.
+.parent{
+  position:relative;
+}
+
+.child{
+  position:absolute;
+  top:0; 0px from top of parent
+  left:50; 50 px left from parent
+}
+ in absolute when we move an element its space is taken by the successive element
+*/
+
+div.position {
+  background-color: greenyellow;
+}
+
+.relative-element {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.relative-pos {
+  background-color: darkkhaki;
+  position: relative;
+}
+
+.relative-pos img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav.absolute-pos {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%
+}
+
+nav.absolute-pos > ul {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  position: static;
+  list-style: none;
+  background-color: #000000;
+  opacity: 0.9;
+}
+
+nav.absolute-pos > ul > li {
+  box-sizing: border-box;
+  font-size: 24px;
+  font-weight: 800;
+  font-family: monospace;
+  color: white;
+  padding: 10px 5px;
+  margin: 20px;
+  position: static;
+  display: inline-block;
+  cursor: pointer;
+}
+
+nav.absolute-pos > ul > li:hover {
+  background-color: white;
+  color: black;
+}
