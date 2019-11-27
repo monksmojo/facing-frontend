@@ -47,6 +47,10 @@ section.landing h2 {
     margin: 5px;
   }
 
+  .line1 {
+    background-color: black !important;
+  }
+
   nav {
     position: relative;
   }
