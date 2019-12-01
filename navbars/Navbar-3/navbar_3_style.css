@@ -26,15 +26,15 @@ body {
 /*end of default styles*/
 
 /*styling of navbar on large screen*/
-/* .menu-wrap {
+.menu-wrap {
   position: sticky;
   top: 0px;
   z-index: 1;
   background-color: #5b78c7;
   width: 100%;
-} */
+}
 
-/* .menu-wrap .toggler {
+.menu-wrap .toggler {
   display: none;
 }
 
@@ -42,16 +42,46 @@ body {
   float: left;
   padding: 1rem;
   font-size: 2rem;
+  color: white;
 }
 
-.menu-wrap .menu ul {
+.menu-wrap .hamburger {
+  display: none;
+}
+
+.menu-wrap .menu {
+  float: right;
+  display: block;
+  width: 80%;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-around;
   align-items: center;
-} */
+}
 
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.menu-wrap::after {
+  display: block;
+  clear: both;
+  content: "";
+}
 /*end of navbar*/
 
 /*showcase styling*/
@@ -90,12 +120,14 @@ body {
 }
 .container h2 {
   font-size: 3rem;
-  color: yellow;
+  background-color: hsl(60, 100%, 50%, 0.8);
+  color: black;
 }
 
 .container h3 {
   font-size: 1.3rem;
-  color: yellow;
+  background-color: hsl(60, 100%, 50%, 0.8);
+  color: black;
 }
 
 .btn {
@@ -127,7 +159,12 @@ body {
   }
 
   .menu-wrap .logo-heading {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
   }
 
   /*so how this works
@@ -222,6 +259,8 @@ body {
 
   .menu-wrap .menu {
     position: fixed;
+    float: none;
+    padding: 0;
     top: 0px;
     right: 0px;
     width: 100%;
@@ -255,9 +294,9 @@ body {
     transition: opacity 0.4s ease;
   }
 
-  /* .menu-wrap .menu > div > div > ul {
+  .menu-wrap .menu > div > div > ul {
     display: block;
-  } */
+  }
   .menu-wrap .menu > div > div > ul > li {
     list-style: none;
     font-size: 1.5rem;
